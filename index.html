@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoSuggestion & AutoComplete</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <form autocomplete="off">
+            <div class="autocomplete">
+                <input id="name" type="text" name="name" placeholder="Name">
+                <span class="clear">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="autocomplete">
+                <input id="email" type="email" name="email" placeholder="Email" readonly>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/autocomplete.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            init();
+
+            $('form').submit(function(e) {
+                e.preventDefault();
+            })
+        });
+    </script>
+</body>
+
+</html>
